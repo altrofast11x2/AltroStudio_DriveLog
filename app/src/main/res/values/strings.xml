@@ -1,0 +1,388 @@
+<resources>
+    <string name="app_name">차곡</string>
+    <string name="recording_channel_name">운행 기록</string>
+    <string name="recording_notification_text">운행을 자동으로 기록하고 있습니다</string>
+
+    <!-- 공통 -->
+    <string name="back">뒤로</string>
+    <string name="cancel">취소</string>
+    <string name="close">닫기</string>
+    <string name="km_value">%1$s km</string>
+    <string name="count_value">%1$d건</string>
+    <string name="percent_value">%1$s%%</string>
+    <string name="duration_minutes">%1$d분</string>
+    <string name="duration_seconds">%1$d초</string>
+    <string name="default_driver_name">기본 운전자</string>
+    <string name="address_unknown">주소 없음</string>
+    <string name="purpose_commute">출퇴근</string>
+    <string name="purpose_business">일반업무</string>
+    <string name="purpose_personal">비업무</string>
+    <string name="purpose_unclassified">미분류</string>
+
+    <!-- 동의 -->
+    <string name="consent_refuse">동의하지 않아도 됩니다. 동의하지 않으면 자동 기록 기능을 쓸 수 없어요. 동의한 뒤에도 설정에서 언제든 철회할 수 있어요.</string>
+    <string name="consent_agree">동의하고 시작</string>
+    <string name="consent_decline">동의하지 않음</string>
+    <string name="consent_declined_message">동의하지 않으면 운행이 기록되지 않아요</string>
+
+    <!-- 주행 중 -->
+    <string name="driving_recording">운행 기록 중</string>
+    <string name="driving_hint">용도는 정차한 뒤에 고를 수 있습니다</string>
+    <string name="driving_locked">주행 중에는 조작할 수 없습니다</string>
+    <string name="driving_locked_hint">정차한 뒤에 이용해 주세요</string>
+
+    <!-- 정차 후 분류 -->
+    <string name="classify_title">이번 운행의 용도를 골라 주세요</string>
+    <string name="classify_summary">%1$s → %2$s · %3$s km</string>
+    <string name="classify_route">%1$s → %2$s</string>
+    <string name="classify_suggested">지난번 이 목적지</string>
+    <string name="classify_personal_note">주소 없이 거리만 기록</string>
+    <string name="classify_timeout_note">고르지 않으면 %1$s 뒤 미분류로 저장되고, 운행기록부에서 나중에 고를 수 있습니다</string>
+    <string name="classify_later">나중에</string>
+    <string name="voice_input_button">말로 기록</string>
+    <string name="voice_input_retry">다시 말하기</string>
+    <string name="voice_input_stop">그만 듣기</string>
+    <string name="voice_input_hint">“업무, 거래처 납품 미팅”처럼 용도와 업무 내용을 말씀하세요</string>
+    <string name="voice_input_preparing">안내가 끝나면 들을게요</string>
+    <string name="voice_input_listening">듣고 있어요…</string>
+    <string name="voice_input_listening_text">듣고 있어요 · “%1$s”</string>
+    <string name="voice_input_listening_note">일반업무 · 어떤 업무였는지 듣고 있어요…</string>
+    <string name="voice_input_listening_note_text">일반업무 · 업무 내용 “%1$s”</string>
+    <string name="voice_input_recording">%1$s 기록하는 중</string>
+    <string name="voice_input_confirm">%1$s — 맞나요? “맞아”라고 말하거나 [맞아요]를 누르세요. 용도만 틀렸으면 위에서 고르세요</string>
+    <string name="voice_input_confirm_heard">%1$s — 맞나요? · 대답 “%2$s”</string>
+    <string name="voice_input_confirm_button">맞아요</string>
+    <string name="voice_input_type">직접 입력</string>
+    <string name="note_dialog_title">용도와 업무 내용 입력</string>
+    <string name="note_dialog_label">업무 내용 (방문처·한 일)</string>
+    <string name="note_dialog_placeholder">예: 거래처 납품 미팅</string>
+    <string name="note_dialog_personal">비업무는 업무 내용을 남기지 않아요</string>
+    <string name="note_dialog_save">기록</string>
+    <string name="voice_input_not_understood">“%1$s” — 용도를 알아듣지 못했어요. 출퇴근, 업무, 비업무 중에 말씀하시거나 위에서 골라 주세요</string>
+    <string name="voice_input_no_speech">말씀을 듣지 못했어요. 다시 말하거나 위에서 골라 주세요</string>
+    <string name="voice_input_unavailable">지금은 음성 인식을 쓸 수 없어요 (통화 중이거나 마이크를 쓸 수 없음). 위에서 골라 주세요</string>
+
+    <!-- 홈 -->
+    <string name="home_month_title">%1$d년 %2$d월</string>
+    <string name="home_open_logbook">월별 운행기록부 보기</string>
+    <string name="home_open_settings">설정</string>
+    <string name="summary_total">총 주행거리</string>
+    <string name="summary_work">업무용 사용거리</string>
+    <string name="summary_ratio">업무사용비율</string>
+    <string name="summary_unclassified">미분류</string>
+
+    <!-- 운행기록부 -->
+    <string name="logbook_title">월별 운행기록부</string>
+    <string name="logbook_empty">이 달에는 운행 기록이 없습니다</string>
+    <string name="logbook_empty_period">이 기간에는 운행 기록이 없습니다</string>
+    <string name="logbook_pick_period">기간 선택</string>
+    <string name="logbook_period_title">운행기록부 기간</string>
+    <string name="logbook_share_button">휴대폰으로 받기</string>
+    <string name="logbook_share_title">휴대폰으로 받기</string>
+    <string name="logbook_share_creating">링크를 만드는 중…</string>
+    <string name="logbook_share_left">%1$d:%2$02d 남음 · 10분 동안만 열려요</string>
+    <string name="logbook_share_hint">휴대폰 카메라로 QR 코드를 찍으면 이 기간의 운행기록부가 열려요. 휴대폰에서 CSV·PDF로 저장하거나 카톡·메일로 보낼 수 있어요</string>
+    <string name="logbook_share_qr_description">운행기록부를 휴대폰에서 여는 QR 코드</string>
+    <string name="logbook_share_expired">링크가 만료됐어요</string>
+    <string name="logbook_share_retry">다시 만들기</string>
+    <string name="logbook_share_failed_offline">인터넷에 연결되지 않아 링크를 만들지 못했어요</string>
+    <string name="logbook_share_failed_not_paired">이 차량이 조직에 연결되어 있지 않아요. 설정에서 다시 연결하세요</string>
+    <string name="logbook_share_failed_too_many">링크를 너무 많이 만들었어요. 잠시 뒤 다시 시도하세요</string>
+    <string name="logbook_share_failed">링크를 만들지 못했어요. 잠시 뒤 다시 시도하세요</string>
+    <string name="logbook_export_on_web">%1$s 직원은 %2$s 에서 [직원 회원가입]을 하면 운행기록부와 세무서 제출용 서식을 직접 받을 수 있어요</string>
+    <string name="logbook_period_hint">칸을 고르고 달력에서 날짜를 누르세요. 연도는 달 이름(▾)을 눌러 바꿔요</string>
+    <string name="logbook_period_start">시작 날짜</string>
+    <string name="logbook_period_end">끝 날짜</string>
+    <string name="logbook_period_this_month">이번 달</string>
+    <string name="logbook_period_apply">적용</string>
+    <string name="logbook_period_too_long">기간은 %1$d일까지 고를 수 있어요</string>
+    <string name="logbook_period_range">%1$s – %2$s</string>
+    <string name="logbook_col_date">사용일자</string>
+    <string name="logbook_col_driver">사용자</string>
+    <string name="logbook_col_start">주행 전(km)</string>
+    <string name="logbook_col_end">주행 후(km)</string>
+    <string name="logbook_col_distance">주행거리</string>
+    <string name="logbook_col_commute">출퇴근용</string>
+    <string name="logbook_col_business">일반업무용</string>
+    <string name="logbook_col_note">비고(방문처·업무 내용)</string>
+    <string name="logbook_col_purpose">구분</string>
+    <string name="logbook_classify">분류</string>
+    <string name="logbook_unclassified_note">미분류 운행은 업무용 사용거리에 넣지 않습니다</string>
+    <string name="logbook_export">CSV 내보내기</string>
+    <string name="logbook_exporting">저장 중…</string>
+    <string name="logbook_export_done">저장했습니다: %1$s</string>
+    <string name="logbook_export_failed">저장하지 못했습니다: %1$s</string>
+    <string name="integrity_checking">기록 무결성 확인 중…</string>
+    <string name="integrity_valid">기록 무결성 확인됨 (해시 체인 %1$d건)</string>
+    <string name="integrity_broken">기록이 바뀐 흔적이 있습니다 (%1$d번째 기록: %2$s)</string>
+    <string name="classify_dialog_title">%1$s 운행의 용도</string>
+
+    <!-- 차량 연결 (design/specs/A02-connect.md) -->
+    <string name="connect_title">차량 연결</string>
+    <string name="connect_headline">연결 코드를 입력하세요</string>
+    <string name="connect_description">관리자 웹 › 차량 › 연결 코드 발급에서 받은 6자리 숫자예요. 코드는 10분 동안 유효해요.</string>
+    <string name="connect_sharing_notice">연결하면 이 차량의 운행 기록이 조직 관리자에게 제공돼요. 비업무 운행은 주소 없이 거리만 올라가요.</string>
+    <string name="connect_verifying">확인하고 있어요</string>
+    <string name="connect_error_invalid">코드가 맞지 않아요. 관리자 웹에서 다시 확인해 주세요</string>
+    <string name="connect_error_expired">만료된 코드예요. 관리자에게 새 코드를 요청하세요</string>
+    <string name="connect_error_offline">인터넷에 연결되지 않았어요. 연결 후 다시 입력해 주세요</string>
+    <string name="connect_error_too_many">시도가 너무 많아요. 1시간 뒤에 다시 입력해 주세요</string>
+    <string name="connect_error_other_org">다른 조직에서 쓰는 차량이에요. 그 조직 관리자에게 연결 해제를 요청하세요</string>
+    <string name="connect_error_not_configured">서버가 설정되지 않은 빌드예요. [나중에 연결]을 눌러 주세요</string>
+    <string name="connect_error_unknown">연결하지 못했어요. 잠시 뒤 다시 시도해 주세요</string>
+    <string name="connect_vehicle_vin">이 차량: 차대번호 확인됨</string>
+    <string name="connect_vehicle_device">이 차량: 차대번호 미확인 · 기기 ID로 등록돼요</string>
+    <string name="connect_skip">나중에 연결</string>
+    <string name="connect_clear">전체 지움</string>
+    <string name="connect_backspace">한 글자 지움</string>
+    <string name="connect_done_title">%1$s에 연결됐어요</string>
+    <string name="connect_done_body">이제 운행이 자동으로 기록돼요</string>
+    <string name="connect_done_start">시작하기</string>
+
+    <!-- 동기화 상태 (홈) -->
+
+    <!-- 설정 -->
+    <string name="settings_title">설정</string>
+    <string name="settings_org">조직</string>
+    <string name="settings_org_connected">%1$s에 연결됨</string>
+    <string name="settings_org_none">연결되지 않음 · 기록은 이 차량에만 저장돼요</string>
+    <string name="settings_connect">차량 연결하기</string>
+    <string name="settings_reconnect">다른 조직으로 다시 연결</string>
+    <string name="settings_vehicle">차량</string>
+    <string name="settings_vehicle_vin">VIN %1$s</string>
+    <string name="settings_vehicle_device">VIN을 확인할 수 없어 기기 ID로 차량을 구분합니다</string>
+    <string name="settings_voice">음성 안내</string>
+    <string name="settings_voice_description">운행 시작, 정차, 분류 결과를 차량 스피커로 알려 줍니다. 차 안의 음성 엔진으로 읽어 문장이 밖으로 나가지 않아요</string>
+    <string name="settings_voice_journal">말로 용도 기록</string>
+    <string name="settings_voice_journal_description">정차하면 “용도와 업무 내용을 말씀해 주세요”라고 묻고, “업무, 거래처 납품 미팅”처럼 말하면 그대로 기록해요. 음성 안내가 켜져 있을 때 물어요. 차 안의 음성 인식 엔진이 받아 적고, 녹음은 앱이 받지도 남기지도 않아요</string>
+    <string name="settings_privacy">개인정보 처리방침</string>
+    <string name="update_title">새 버전이 있어요</string>
+    <string name="update_message">최신 버전(%1$s)이 있습니다. 업데이트를 위해 앱 마켓 페이지로 이동할까요?</string>
+    <string name="update_open_market">이동</string>
+    <string name="update_later">나중에</string>
+    <string name="update_market_unavailable">앱 마켓을 열 수 없어요. Pleos App Market에서 직접 업데이트해 주세요</string>
+    <string name="settings_licenses">오픈소스 라이선스</string>
+    <string name="settings_withdraw">동의 철회 및 데이터 삭제</string>
+    <string name="withdraw_confirm_title">동의를 철회할까요?</string>
+    <string name="withdraw_confirm_message">운행 기록을 멈추고 이 차량에 저장된 모든 운행 기록과 설정을 바로 삭제합니다. 조직에 연결한 차량은 연결도 해제됩니다. 되돌릴 수 없습니다.</string>
+    <string name="withdraw_confirm">철회하고 삭제</string>
+
+    <!-- 개인정보 처리방침 -->
+    <string name="privacy_title">개인정보 처리방침</string>
+    <string name="privacy_body">AltroStudio(이하 개발사)는 차곡(자동 운행기록부) 앱에서 다음과 같이 개인정보를 처리합니다.\n\n1. 수집 항목\n운행 시작·종료 시각, 주행 전·후 계기판 누적 거리, 배터리 잔량(전기차), 운행 시작·종료 지점의 주소, 내비게이션 목적지·경유지 도착 정보(이름, 주소), 차량 식별번호(VIN) 또는 앱이 만든 기기 ID, 운전자가 고른 운행 용도. 조직에 연결한 차량에서는 운전자의 이름·부서, 운전자별 차량 맞춤 설정(공조 온도, 시트 열선·통풍, 무드등 색), 운행을 마칠 때의 차 안 상태(창문 열림, 실내등, 문 잠김, 배터리 잔량), 말로 남긴 업무 내용(정차 후 앱에 말하거나 Gleo AI에 말한 글자)도 처리합니다.\n\n2. 수집 방법\n차량 시스템(Pleos Connect SDK)과 내비게이션에서 자동으로 읽습니다. 운전자 명단은 조직 서버에서 받습니다. 위치는 운행 시작과 종료 두 시점의 주소만 조회하며, 실시간 위치 추적은 하지 않습니다.\n\n3. 이용 목적\n업무용 승용차 운행기록부 작성과 열람. 공용차를 쓰는 운전자별 차량 맞춤, 다음 운전자를 위한 차량 상태 확인.\n\n4. 보유 기간과 파기\n기록은 먼저 이 차량 안에 저장됩니다. 차량 안의 기록과 설정(차량 식별번호, 로그인 정보 포함)은 이 차량의 보안 저장소(Android Keystore) 키로 암호화해 보관합니다. 비업무로 분류한 운행은 분류하는 즉시 주소, 도착 정보, 업무 내용을 지우고 거리만 남깁니다. 설정에서 동의를 철회하면 이 차량에 저장된 모든 기록과 설정을 즉시 삭제합니다. 조직에 연결한 차량이면 서버와의 연결도 끊어 그 뒤로는 기록을 보내지 않습니다. 이미 서버에 올라간 기록은 5항에 따릅니다.\n\n5. 제공\n관리자가 준 연결 코드로 차량을 조직(회사)에 연결한 경우에만, 운행 기록(위 수집 항목)과 운전자별 맞춤 설정, 운행을 마칠 때의 차 안 상태가 그 조직의 서버로 전송되어 조직 관리자에게 제공됩니다. 맞춤 설정은 같은 조직의 다른 공용차에서 그 운전자를 고를 때도 쓰입니다. 서버에 올라간 기록은 조직의 보관 정책에 따르며, 삭제는 조직 관리자에게 요청할 수 있습니다. 그 밖의 제3자에게는 제공하지 않습니다.\n조직에 연결한 차량에서 운행기록부의 [휴대폰으로 받기]를 누르면, 고른 기간의 운행 기록을 10분 동안 열 수 있는 주소(QR 코드)를 만듭니다. 그 10분 동안은 주소를 아는 사람 누구나 그 기록을 볼 수 있으니 다른 사람에게 보여 주지 마세요.\n\n6. 이용자의 권리\n운전자는 앱의 월별 운행기록부에서 자신의 기록을 언제든 열람할 수 있습니다. 조직에 연결하지 않은 차량은 CSV로 내보내고, 연결한 차량은 [휴대폰으로 받기]로 휴대폰에서 받을 수 있습니다. 동의를 철회해 기록 삭제를 요청할 수 있습니다.\n\n7. 기록의 무결성\n계기판 거리와 운행 용도는 고칠 수 없도록 해시 체인으로 묶어 보관합니다. 값을 바꾸면 기록부 화면에 흔적이 표시됩니다.\n\n8. 음성 안내, 말로 기록, 업데이트 확인\n음성 안내는 차량 안의 음성 엔진(Pleos TextToSpeech)으로 읽어, 읽는 문장이 차 밖으로 나가지 않습니다. 정차하면 앱이 용도와 업무 내용을 말로 묻고, 차량 안의 음성 인식 엔진(Pleos SpeechToText, 차량 안에서 처리)으로 한 번 듣습니다. 분류 화면의 [말로 기록]을 눌러도 듣습니다. 듣는 동안 받아 적는 글자가 화면에 보이고, 화면에서 고르거나 다시 출발하면 바로 멈춥니다. Gleo AI 음성 명령으로도 운행 용도·업무 내용·운전자를 기록할 수 있습니다. 어느 쪽이든 이 앱은 녹음을 받지 않고 받아 적은 글자(용도, 업무 내용, 이름)만 받으며, 그 가운데 업무 내용과 운전자만 기록에 남깁니다. 설정의 [말로 용도 기록]에서 끌 수 있습니다. 홈의 [도움]으로 물을 때도 같은 차량 안 엔진으로 듣고, 받아 적은 글자는 알맞은 안내를 고르는 데만 쓰고 저장하지 않습니다. 새 버전 안내를 위해 하루에 한 번 개발사 웹사이트에서 최신 버전 번호만 받아 오며, 이때 운행 기록이나 차량 정보는 보내지 않습니다.\n\n9. 차량 제어\n운전자를 고르면 그분의 설정으로 공조 온도·시트 열선·무드등을 맞추고, 정차 후 용도를 기다릴 때와 고른 뒤 잠깐 무드등 색을 바꿨다가 원래대로 되돌립니다. 창문 닫기·실내등 끄기·문 잠그기는 정차 중 운전자가 화면에서 직접 누를 때만 합니다. 설정에서 각각 끌 수 있습니다.\n\n10. 문의\nAltroStudio · kazinobel9807@gmail.com</string>
+
+    <!-- 오픈소스 라이선스 -->
+    <string name="licenses_title">오픈소스 라이선스</string>
+    <string name="licenses_intro">이 앱은 아래 소프트웨어를 사용합니다.</string>
+    <string name="licenses_show_apache">Apache License 2.0 전문 보기</string>
+
+    <!-- 디자인 v0.1 공통 (design/specs/A00-common.md) -->
+    <string name="badge_vehicle_record">차량 기록</string>
+    <string name="step_chip">단계 %1$d / %2$d</string>
+    <string name="step_chip_short">%1$d / %2$d</string>
+    <string name="unit_km">km</string>
+    <string name="unit_percent" formatted="false">%</string>
+
+    <!-- A01 동의 (design/specs/A01-consent.md). 문구 내용은 동의문 버전 2와 같다 -->
+    <string name="consent_screen_title">시작하기 전에</string>
+    <string name="consent_card_collected">수집하는 정보</string>
+    <string name="consent_card_not_collected">수집하지 않는 정보</string>
+    <string name="consent_card_purpose">이용 목적</string>
+    <string name="consent_card_retention">보유기간과 제공</string>
+    <string name="consent_card_refuse">거부할 권리</string>
+    <string name="consent_open_policy">개인정보 처리방침 전문 보기</string>
+    <string name="consent_agree_note">‘동의하고 시작’을 눌러야 동의로 처리돼요</string>
+    <string name="consent_return">돌아가기</string>
+    <string name="consent_exit">앱 닫기</string>
+    <string-array name="consent_summary">
+        <item>주행거리는 차가 직접 기록해요</item>
+        <item>실시간 위치는 수집하지 않아요</item>
+        <item>언제든 설정에서 철회할 수 있어요</item>
+    </string-array>
+    <string-array name="consent_collected_labels">
+        <item>주행거리</item>
+        <item>운행 시각</item>
+        <item>출발·도착지</item>
+        <item>배터리 잔량</item>
+        <item>차량 식별</item>
+        <item>운행 용도</item>
+        <item>운전자</item>
+        <item>차량 맞춤 설정</item>
+        <item>차 안 상태</item>
+        <item>업무 내용</item>
+    </string-array>
+    <string-array name="consent_collected_values">
+        <item>운행 전·후 계기판 누적거리 (차량에서 직접 읽음)</item>
+        <item>시작·종료 시각</item>
+        <item>운행 시작·종료 지점의 주소, 내비게이션 목적지·경유지 도착 정보 (비업무로 고르면 바로 지워요)</item>
+        <item>운행 전·후 남은 비율 (전기차)</item>
+        <item>차대번호(VIN). 확인되지 않으면 앱이 만든 기기 ID</item>
+        <item>출퇴근 / 일반업무 / 비업무 (직접 선택)</item>
+        <item>조직에 연결한 차량에서 고른 운전자의 이름·부서 (운행기록부 사용자 칸)</item>
+        <item>운전자별 공조 온도·시트 열선·무드등 색 (그분이 마지막으로 쓴 값을 기억해 다음에 맞춰요)</item>
+        <item>운행을 마칠 때 창문·실내등·문 잠김 상태 (하차 점검)</item>
+        <item>말로 남긴 업무 내용: 정차 후 앱에 말하거나 Gleo AI에 말한 글자 (비업무로 고르면 바로 지워요)</item>
+    </string-array>
+    <string-array name="consent_not_collected_labels">
+        <item>실시간 위치</item>
+        <item>비업무 주소</item>
+        <item>주행 속도</item>
+        <item>음성</item>
+    </string-array>
+    <string-array name="consent_not_collected_values">
+        <item>이동 중 위치와 경로는 저장하지 않아요</item>
+        <item>비업무 운행은 주소 없이 거리만 남겨요</item>
+        <item>속도는 읽지 않아요</item>
+        <item>목소리는 차량 안의 음성 인식 엔진(Pleos 음성 인식, Gleo AI)이 글자로 바꾸고, 이 앱은 그 글자만 받아요. 녹음은 받지도 남기지도 않아요</item>
+    </string-array>
+    <string-array name="consent_purpose_labels">
+        <item>운행기록부</item>
+        <item>조직 열람</item>
+        <item>공용차 관리</item>
+    </string-array>
+    <string-array name="consent_purpose_values">
+        <item>업무용 승용차 운행기록부 작성과 열람</item>
+        <item>관리자가 준 연결 코드로 차량을 조직(회사)에 연결한 경우, 그 조직 관리자의 열람과 취합</item>
+        <item>운전자별 차량 맞춤, 다음 운전자를 위한 차량 상태(창문·배터리) 확인</item>
+    </string-array>
+    <string-array name="consent_retention_labels">
+        <item>이 차량</item>
+        <item>조직 서버</item>
+        <item>그 밖의 제공</item>
+    </string-array>
+    <string-array name="consent_retention_values">
+        <item>동의를 철회하면 저장된 기록과 설정을 즉시 삭제해요</item>
+        <item>조직에 연결한 경우에만 기록이 올라가고, 조직의 보관 정책을 따라요. 삭제는 조직 관리자에게 요청할 수 있어요</item>
+        <item>없어요 (제3자에게 제공하지 않아요)</item>
+    </string-array>
+
+    <!-- 주행 중 "시작 전" 변형 (A01·A02 주행 중) -->
+    <string name="driving_wait_consent">정차 후 시작할 수 있어요</string>
+    <string name="driving_wait_connect">정차 후 연결할 수 있어요</string>
+    <string name="driving_started_at">%1$s 출발</string>
+
+    <!-- A03 홈 (design/specs/A03-home.md) -->
+    <string name="home_unclassified_title">분류하지 않은 운행 %1$d건</string>
+    <string name="home_unclassified_oldest">가장 오래된 운행: %1$s</string>
+    <string name="home_classify_now">지금 분류하기</string>
+    <string name="home_month">%1$d월</string>
+    <string name="home_all_classified">모두 분류됨</string>
+    <string name="home_ratio_excluding_unclassified">업무사용비율 · 미분류 제외</string>
+    <string name="home_month_empty">이번 달 운행이 아직 없어요. 차를 출발하면 자동으로 기록돼요</string>
+    <string name="home_recent_title">최근 운행</string>
+    <string name="home_see_all">전체 보기</string>
+    <string name="home_recent_empty">기록된 운행이 없어요</string>
+    <string name="home_route">%1$s → %2$s</string>
+    <string name="home_no_address">주소 저장 안 함</string>
+    <string name="sync_chip_local">이 차량에만 저장</string>
+    <string name="sync_chip_not_connected">조직 미연결</string>
+    <string name="sync_chip_synced">동기화됨</string>
+    <string name="sync_chip_pending">올릴 기록 %1$d건</string>
+    <string name="sync_chip_offline">오프라인 · 연결되면 올라가요</string>
+
+    <string name="licenses_show_ofl">SIL OFL 1.1 전문 보기</string>
+    <string name="licenses_show_sqlcipher">SQLCipher 라이선스 전문 보기</string>
+    <string name="licenses_back_to_list">목록으로</string>
+    <string name="logbook_month_chip_year">%1$d년</string>
+
+    <!-- 공용차 운전자 (홈 운전자 카드, 운전자 고르기) -->
+    <string name="driver_card_title">운전하는 분</string>
+    <string name="driver_card_none">운전하는 분을 골라 주세요</string>
+    <string name="driver_card_confirm_title">오늘 운전하시는 분이 맞나요?</string>
+    <string name="driver_card_hint">운행기록부 사용자 칸에 적히고, 그분의 온도·열선·무드등으로 차를 맞춰요</string>
+    <string name="driver_confirm_yes">맞아요</string>
+    <string name="driver_change">바꾸기</string>
+    <string name="driver_choose">고르기</string>
+    <string name="driver_picker_title">운전하는 분을 골라 주세요</string>
+    <string name="driver_picker_hint">고르면 그분의 맞춤 설정으로 차를 맞춰요. 운행이 끝나면 그때의 설정을 다시 기억해요</string>
+    <string name="driver_assigned">이 차 배정</string>
+    <string name="driver_current">지금 운전</string>
+    <string name="driver_comfort_temp">%1$s°</string>
+    <string name="driver_comfort_heat">열선 %1$d단계</string>
+    <string name="driver_comfort_vent">통풍 %1$d단계</string>
+    <string name="driver_comfort_seat_off">열선 끔</string>
+    <string name="driver_comfort_ambient">무드등</string>
+    <string name="driver_comfort_none">맞춤 설정 없음 · 운행이 끝나면 지금 설정을 기억해요</string>
+    <string name="driver_applying">맞추는 중…</string>
+    <string name="driver_applied">%1$s 님 설정으로 맞췄어요</string>
+    <string name="driver_applied_nothing">%1$s 님으로 기록해요</string>
+    <string name="driving_driver">%1$s 님 운행</string>
+
+    <!-- 하차 전 확인 -->
+    <string name="exit_check_title">내리기 전에 확인해 주세요</string>
+    <string name="exit_check_done_title">차를 정리했어요</string>
+    <string name="exit_check_light">실내등이 켜져 있어요</string>
+    <string name="exit_check_battery">배터리 %1$d%% · 다음 분을 위해 충전해 주세요</string>
+    <string name="exit_check_tidy">한 번에 정리</string>
+    <string name="exit_check_lock">문 잠그기</string>
+    <string name="exit_check_close">닫기</string>
+    <string name="exit_check_failed">차가 받아들이지 않은 항목이 있어요. 직접 확인해 주세요</string>
+    <string name="exit_check_safety">창문은 닫히는 동안 손이 끼지 않게 확인해 주세요</string>
+
+    <!-- 설정: 차 안 연동 -->
+    <string name="settings_cabin">차 안 연동</string>
+    <string name="settings_auto_comfort">운전자 맞춤 설정</string>
+    <string name="settings_auto_comfort_description">운전하는 분을 고르면 그분의 온도·시트 열선·무드등으로 차를 맞춰요</string>
+    <string name="settings_ambient_cue">무드등 신호</string>
+    <string name="settings_ambient_cue_description">정차 후 용도를 기다릴 때와 고른 뒤에 무드등 색으로 알려요. 끝나면 원래 색으로 돌아가요</string>
+    <string name="settings_exit_check">하차 점검</string>
+    <string name="settings_exit_check_description">운행을 마치면 열린 창문·켜진 실내등·배터리를 확인해 알려요</string>
+    <string name="home_open_help">도움</string>
+    <string name="home_open_car_status">차 상태</string>
+    <string name="car_status_title">차 상태</string>
+    <string name="car_status_loading">차 상태를 읽는 중…</string>
+    <string name="car_status_front">앞</string>
+    <string name="car_status_legend_open">열린 창문</string>
+    <string name="car_status_unknown">알 수 없음</string>
+    <string name="car_status_battery">배터리</string>
+    <string name="car_status_odometer">계기판</string>
+    <string name="car_status_windows">창문</string>
+    <string name="car_status_windows_closed">모두 닫힘</string>
+    <string name="car_status_open_suffix">열림</string>
+    <string name="car_status_doors">문</string>
+    <string name="car_status_locked">잠김</string>
+    <string name="car_status_unlocked">잠기지 않음</string>
+    <string name="car_status_cabin_light">실내등</string>
+    <string name="car_status_on">켜짐</string>
+    <string name="car_status_off">꺼짐</string>
+    <string name="car_status_temperature">공조 온도</string>
+    <string name="car_status_seat">시트</string>
+    <string name="car_status_seat_heat">열선 %1$d단계</string>
+    <string name="car_status_seat_vent">통풍 %1$d단계</string>
+    <string name="car_status_ambient">무드등</string>
+    <string name="car_status_refresh_note">5초마다 차에서 다시 읽어요</string>
+    <string name="car_status_control_parked_only">창문 닫기·문 잠그기·실내등 끄기는 P에 두고 주행 제한이 없을 때만 할 수 있어요</string>
+    <string name="car_status_nothing_to_tidy">정리할 것이 없어요. 창문·문·실내등 모두 괜찮아요</string>
+    <string name="car_status_close_windows">창문 닫기</string>
+    <string name="car_status_lock_doors">문 잠그기</string>
+    <string name="car_status_light_off">실내등 끄기</string>
+    <string name="help_title">무엇을 도와드릴까요?</string>
+    <string name="help_hint">“차 상태 알려 줘”처럼 말하거나 아래에서 고르세요</string>
+    <string name="help_asking">안내가 끝나면 들을게요</string>
+    <string name="help_answered">알려 드렸어요. 그 화면으로 이동할게요</string>
+    <string name="help_not_understood">“%1$s” — 잘 모르겠어요. 아래에서 골라 주세요</string>
+    <string name="help_no_speech">말씀을 듣지 못했어요. 다시 말하거나 아래에서 고르세요</string>
+    <string name="help_unavailable">지금은 음성 인식을 쓸 수 없어요. 아래에서 골라 주세요</string>
+    <string name="help_close">닫기</string>
+    <string name="help_topic_car_status">차 상태</string>
+    <string name="help_topic_logbook">운행기록부</string>
+    <string name="help_topic_share">휴대폰으로 받기</string>
+    <string name="help_topic_driver">운전자 바꾸기</string>
+    <string name="help_topic_voice">말로 기록하는 법</string>
+    <string name="help_topic_tutorial">사용법 다시 보기</string>
+    <string name="help_topic_settings">설정</string>
+    <string name="tutorial_title">사용법 %1$d / %2$d</string>
+    <string name="tutorial_skip">건너뛰기</string>
+    <string name="tutorial_prev">이전</string>
+    <string name="tutorial_next">다음</string>
+    <string name="tutorial_start">시작하기</string>
+    <string name="tutorial_1_title">차가 알아서 기록해요</string>
+    <string name="tutorial_1_body">기어를 D로 넣으면 운행 기록이 시작되고 P에 두면 끝나요. 계기판 거리는 차에서 직접 읽으니 주행 중에는 누를 것이 없어요. 쌓인 기록은 홈의 [전체 보기]에서 운행기록부로 봐요.</string>
+    <string name="tutorial_2_title">세우면 용도만 알려 주세요</string>
+    <string name="tutorial_2_body">차가 용도와 업무 내용을 물어봐요. “업무, 거래처 미팅”처럼 말하고, 차가 되읽으면 “맞아”라고 하면 기록돼요. 화면에서 용도를 누르거나 [직접 입력]으로 써도 돼요.</string>
+    <string name="tutorial_3_title">공용차라면 운전자를 고르세요</string>
+    <string name="tutorial_3_body">고르면 그분의 온도·시트 열선·무드등으로 차를 맞추고 운행기록부 사용자 칸에 적어요. 내리기 전에는 열린 창문과 켜진 실내등을 알려 줘요.</string>
+    <string name="tutorial_4_title">궁금하면 도움 비서에게 물어보세요</string>
+    <string name="tutorial_4_body">홈 오른쪽 위의 물음표 버튼을 누르고 “차 상태 알려 줘”, “휴대폰으로 받는 법”처럼 말하면 답하고 그 화면으로 데려다줘요. 그 옆 자동차 버튼에서는 창문·문·배터리를 한눈에 봐요.</string>
+    <string name="settings_tutorial">사용법 다시 보기</string>
+</resources>

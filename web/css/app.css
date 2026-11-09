@@ -1,0 +1,225 @@
+/* 관리자 웹 스타일. 색·글자·간격·모서리는 tokens.css(design/tokens/tokens.css 복사본)의 drivelog_ 토큰만 쓴다.
+   앱과 같은 남색 다크 테마가 기본이다 (index.html의 data-theme="dark"). 글자는 웹 크기 토큰(--drivelog-web-*)을 쓴다. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--drivelog-background);
+  color: var(--drivelog-text-primary);
+  font: var(--drivelog-web-body);
+  font-variant-numeric: tabular-nums;
+}
+
+h1 { font: var(--drivelog-web-headline); margin: 0 0 var(--drivelog-spacing-medium); }
+h2 { font: var(--drivelog-web-title); margin: var(--drivelog-spacing-large) 0 var(--drivelog-spacing-small); }
+
+button, input, select { font: inherit; color: inherit; }
+
+/* 버튼: 누르면 95%로 줄어든다 (앱과 같은 누름 반응) */
+button {
+  border: var(--drivelog-border-width) solid transparent;
+  border-radius: var(--drivelog-radius-small);
+  padding: var(--drivelog-spacing-extra-small) var(--drivelog-spacing-medium);
+  min-height: calc(var(--drivelog-spacing-extra-large) - var(--drivelog-spacing-extra-small));
+  cursor: pointer;
+  font: var(--drivelog-web-label);
+  font-size: inherit;
+  transition: transform var(--drivelog-press-duration) ease-out;
+}
+button:active:not(:disabled) { transform: scale(var(--drivelog-press-scale)); }
+button:disabled { cursor: default; background: var(--drivelog-button-disabled-background); color: var(--drivelog-text-disabled); border-color: transparent; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: var(--drivelog-border-width) solid var(--drivelog-selection-ring); outline-offset: var(--drivelog-border-width); }
+.button-primary { background: var(--drivelog-button-primary-background); color: var(--drivelog-button-primary-text); }
+.button-primary:active:not(:disabled) { background: var(--drivelog-button-primary-background-pressed); }
+.button-secondary { background: var(--drivelog-button-secondary-background); color: var(--drivelog-button-secondary-text); border-color: var(--drivelog-border-strong); }
+.button-secondary:active:not(:disabled) { background: var(--drivelog-button-secondary-background-pressed); }
+.button-signature { background: var(--drivelog-signature); color: var(--drivelog-signature-text); }
+.button-text { background: none; color: var(--drivelog-text-secondary); padding: var(--drivelog-spacing-extra-small); }
+.button-text:active:not(:disabled) { background: var(--drivelog-surface-pressed); }
+.button-text.danger { color: var(--drivelog-status-error); }
+
+input, select {
+  border: var(--drivelog-border-width) solid var(--drivelog-border);
+  border-radius: var(--drivelog-radius-small);
+  padding: var(--drivelog-spacing-extra-small) var(--drivelog-spacing-small);
+  background: var(--drivelog-surface-raised);
+  color: var(--drivelog-text-primary);
+  color-scheme: inherit;
+}
+input::placeholder { color: var(--drivelog-text-tertiary); }
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--drivelog-spacing-extra-small);
+  margin-bottom: var(--drivelog-spacing-small);
+  font: var(--drivelog-web-label);
+  color: var(--drivelog-text-secondary);
+}
+label input { font: var(--drivelog-web-body); color: var(--drivelog-text-primary); }
+
+.center { max-width: 440px; margin: 10vh auto; padding: 0 var(--drivelog-spacing-small); }
+
+.card {
+  background: var(--drivelog-surface);
+  border-radius: var(--drivelog-radius-medium);
+  padding: var(--drivelog-spacing-large);
+  box-shadow: var(--drivelog-elevation-card);
+}
+.login button { width: 100%; }
+.login .brand-mark { display: flex; align-items: center; gap: var(--drivelog-spacing-small); margin-bottom: var(--drivelog-spacing-medium); }
+.login .brand-mark h1 { margin: 0; }
+
+.message { padding: var(--drivelog-spacing-small) var(--drivelog-spacing-medium); border-radius: var(--drivelog-radius-small); background: var(--drivelog-surface); color: var(--drivelog-text-secondary); }
+.message-error { background: var(--drivelog-status-error-container); color: var(--drivelog-status-error); }
+.message-success { background: var(--drivelog-status-integrity-container); color: var(--drivelog-status-integrity); }
+.form-status:not(:empty) { margin-bottom: var(--drivelog-spacing-small); }
+.muted { color: var(--drivelog-text-secondary); }
+
+/* 앱 표시: 남색 사각 안의 계기판 아이콘 (앱의 동의 화면과 같은 모양) */
+.app-mark {
+  width: var(--drivelog-spacing-extra-large);
+  height: var(--drivelog-spacing-extra-large);
+  border-radius: var(--drivelog-radius-small);
+  background: var(--drivelog-button-primary-background);
+  color: var(--drivelog-signature);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.app-mark svg { width: var(--drivelog-icon-size-small); height: var(--drivelog-icon-size-small); }
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--drivelog-spacing-small);
+  padding: var(--drivelog-spacing-small) var(--drivelog-spacing-large);
+  background: var(--drivelog-surface);
+  border-bottom: var(--drivelog-border-width) solid var(--drivelog-border);
+}
+.brand { font: var(--drivelog-web-title); white-space: nowrap; }
+.org-name { color: var(--drivelog-text-secondary); }
+.spacer { flex: 1; }
+.user { color: var(--drivelog-text-secondary); white-space: nowrap; }
+.topbar .button-text { white-space: nowrap; }
+
+.tabs { display: flex; gap: var(--drivelog-spacing-extra-small); padding: 0 var(--drivelog-spacing-large); background: var(--drivelog-surface); border-bottom: var(--drivelog-border-width) solid var(--drivelog-border); }
+.tab { background: none; border: 0; border-bottom: calc(var(--drivelog-border-width) * 2) solid transparent; border-radius: 0; color: var(--drivelog-text-secondary); padding: var(--drivelog-spacing-small) var(--drivelog-spacing-medium); }
+.tab-active { border-bottom-color: var(--drivelog-accent); color: var(--drivelog-text-primary); }
+
+main > .content { max-width: 1280px; margin: 0 auto; padding: var(--drivelog-spacing-large); }
+
+.toolbar { display: flex; align-items: center; gap: var(--drivelog-spacing-extra-small); flex-wrap: wrap; margin-bottom: var(--drivelog-spacing-medium); }
+.month { margin: 0 var(--drivelog-spacing-extra-small); min-width: 8em; text-align: center; }
+.period { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--drivelog-spacing-extra-small); color: var(--drivelog-text-secondary); }
+.period-label { font: var(--drivelog-web-label); margin-left: var(--drivelog-spacing-small); white-space: nowrap; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--drivelog-spacing-small); margin-bottom: var(--drivelog-spacing-medium); }
+.stat { background: var(--drivelog-surface); border-radius: var(--drivelog-radius-medium); padding: var(--drivelog-spacing-medium); display: flex; flex-direction: column; gap: var(--drivelog-spacing-extra-small); box-shadow: var(--drivelog-elevation-card); }
+.stat-label, .stat-detail { font: var(--drivelog-web-label); color: var(--drivelog-text-secondary); }
+.stat-value { font: var(--drivelog-web-headline); }
+
+.table-wrap { overflow-x: auto; background: var(--drivelog-surface); border-radius: var(--drivelog-radius-medium); box-shadow: var(--drivelog-elevation-card); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: var(--drivelog-spacing-small); border-bottom: var(--drivelog-border-width) solid var(--drivelog-border); text-align: left; white-space: nowrap; }
+th { font: var(--drivelog-web-label); color: var(--drivelog-text-secondary); }
+tbody tr:last-child td { border-bottom: none; }
+th.num, td.num { text-align: right; }
+td.code-cell { letter-spacing: .05em; }
+td.actions { text-align: right; }
+
+/* 용도 칩: 앱과 같은 용도 색 */
+.purpose { display: inline-block; padding: calc(var(--drivelog-spacing-extra-small) / 2) var(--drivelog-spacing-small); border-radius: var(--drivelog-radius-full); font: var(--drivelog-web-label); }
+.purpose-commute { background: var(--drivelog-purpose-commute-background); color: var(--drivelog-purpose-commute-text); }
+.purpose-business { background: var(--drivelog-purpose-business-background); color: var(--drivelog-purpose-business-text); }
+.purpose-personal { background: var(--drivelog-purpose-personal-background); color: var(--drivelog-purpose-personal-text); }
+.purpose-unclassified { background: var(--drivelog-purpose-unclassified-background); color: var(--drivelog-purpose-unclassified-text); }
+
+.badge { display: inline-flex; align-items: center; gap: var(--drivelog-spacing-extra-small); padding: calc(var(--drivelog-spacing-extra-small) / 2) var(--drivelog-spacing-small); border-radius: var(--drivelog-radius-full); font: var(--drivelog-web-label); background: var(--drivelog-surface-raised); color: var(--drivelog-text-secondary); }
+.badge-developer { background: var(--drivelog-signature); color: var(--drivelog-signature-text); }
+
+.pairing { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--drivelog-spacing-small); align-items: start; }
+.pairing-form h2 { margin-top: 0; }
+.code-card { display: flex; flex-direction: column; align-items: center; gap: var(--drivelog-spacing-extra-small); }
+.code { font: var(--drivelog-headline); letter-spacing: .1em; }
+.countdown { margin: 0; color: var(--drivelog-text-secondary); }
+
+/* 개발자: 기업 등록 */
+.org-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: var(--drivelog-spacing-medium); }
+.org-form h2, .org-form .form-wide { grid-column: 1 / -1; }
+.org-form h2 { margin-top: 0; }
+.org-form .section-label { grid-column: 1 / -1; font: var(--drivelog-web-label); color: var(--drivelog-accent); margin: var(--drivelog-spacing-extra-small) 0; }
+
+/* 세무 제출: 국세청고시 제2025-8호 별지 「업무용승용차 운행기록부」 서식 */
+.tax-intro p { margin: var(--drivelog-spacing-extra-small) 0 0; }
+.print-preview { position: fixed; inset: 0; z-index: 10; overflow: auto; background: var(--drivelog-background); padding: 0 var(--drivelog-spacing-large) var(--drivelog-spacing-large); }
+.print-toolbar { position: sticky; top: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--drivelog-spacing-small); padding: var(--drivelog-spacing-small) 0; background: var(--drivelog-background); }
+.tax-form { max-width: 1200px; margin: 0 auto var(--drivelog-spacing-large); padding: var(--drivelog-spacing-large); background: var(--drivelog-surface-raised); color: var(--drivelog-text-primary); }
+.tax-form h3 { font: var(--drivelog-web-label); margin: var(--drivelog-spacing-medium) 0 var(--drivelog-spacing-extra-small); }
+.tax-form table { border-top: var(--drivelog-border-width) solid var(--drivelog-text-primary); border-bottom: var(--drivelog-border-width) solid var(--drivelog-text-primary); }
+.tax-form th, .tax-form td { border: calc(var(--drivelog-border-width) / 2) solid var(--drivelog-border-strong); padding: var(--drivelog-spacing-extra-small); font: var(--drivelog-web-label); color: var(--drivelog-text-primary); text-align: center; white-space: normal; }
+.tax-form td { font-weight: normal; }
+.tax-form td.num { text-align: right; }
+.tax-form .tax-title { font: var(--drivelog-web-title); }
+.tax-form .tax-period { white-space: nowrap; }
+.tax-form .tax-basic { width: auto; min-width: 50%; }
+.tax-form .tax-shade { background: var(--drivelog-surface-pressed); }
+.tax-form .tax-source { font: var(--drivelog-web-label); color: var(--drivelog-text-secondary); margin: var(--drivelog-spacing-extra-small) 0 0; }
+
+@media print {
+  @page { size: A4 landscape; margin: 10mm; }
+  body.printing-forms > :not(.print-preview) { display: none !important; }
+  body.printing-forms { background: none; }
+  .print-preview { position: static; overflow: visible; padding: 0; background: none; }
+  .print-toolbar { display: none; }
+  .tax-form { max-width: none; margin: 0; padding: 0; background: none; break-after: page; }
+  .tax-form thead { display: table-header-group; }
+  .tax-form tr { break-inside: avoid; }
+}
+
+/* 직원 회원가입·직원 관리 */
+.login-signup { text-align: center; margin: var(--drivelog-spacing-small) 0 0; }
+.login-signup .button-text, .login .login-signup button { width: auto; }
+.signup .section-label { font: var(--drivelog-web-label); color: var(--drivelog-accent); margin: var(--drivelog-spacing-small) 0 0; }
+.signup .consent { display: flex; flex-direction: row; gap: var(--drivelog-spacing-small); align-items: flex-start; font: var(--drivelog-web-label); color: var(--drivelog-text-secondary); }
+.signup .consent input { width: auto; margin-top: var(--drivelog-spacing-extra-small); }
+.join-code-card { display: flex; flex-wrap: wrap; align-items: center; gap: var(--drivelog-spacing-medium); margin-bottom: var(--drivelog-spacing-medium); }
+.join-code-card p { flex: 1 1 320px; margin: 0; }
+.vehicle-picker { display: flex; flex-wrap: wrap; gap: var(--drivelog-spacing-small); }
+.vehicle-picker .check { display: inline-flex; flex-direction: row; align-items: center; gap: var(--drivelog-spacing-extra-small); white-space: nowrap; }
+.vehicle-picker input { width: auto; }
+.delete-confirm { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: var(--drivelog-spacing-extra-small); white-space: normal; }
+.delete-confirm input { width: 12em; }
+
+/* 현황: 차량별 반납 상태 카드 */
+.section-note { margin: calc(-1 * var(--drivelog-spacing-extra-small)) 0 var(--drivelog-spacing-small); }
+.fleet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--drivelog-spacing-small); }
+.vehicle-card { display: flex; flex-direction: column; gap: var(--drivelog-spacing-small); padding: var(--drivelog-spacing-medium); border: var(--drivelog-border-width) solid transparent; }
+.vehicle-card-warn { border-color: var(--drivelog-status-warning); }
+.vehicle-card-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--drivelog-spacing-extra-small); font: var(--drivelog-web-title); }
+.vehicle-card-head .muted { font: var(--drivelog-web-label); }
+.vehicle-card p { margin: 0; }
+.chip { align-self: flex-start; padding: calc(var(--drivelog-spacing-extra-small) / 2) var(--drivelog-spacing-small); border-radius: var(--drivelog-radius-full); font: var(--drivelog-web-label); }
+.chip-ok { background: var(--drivelog-status-integrity-container); color: var(--drivelog-status-integrity); }
+.chip-warn { background: var(--drivelog-status-warning-container); color: var(--drivelog-status-warning); }
+.status-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--drivelog-spacing-extra-small); }
+.status-list li { display: flex; justify-content: space-between; gap: var(--drivelog-spacing-small); }
+.status-list li.warn span:last-child { color: var(--drivelog-status-warning); }
+
+/* 업무 일지 */
+.journal { display: flex; flex-direction: column; gap: var(--drivelog-spacing-medium); }
+.journal-day h3 { font: var(--drivelog-web-title); margin: 0 0 var(--drivelog-spacing-extra-small); }
+.journal-day h3 .muted { font: var(--drivelog-web-label); }
+td.work-note { white-space: normal; color: var(--drivelog-text-primary); }
+
+/* 운전자 */
+.driver-form { margin-bottom: var(--drivelog-spacing-medium); }
+.driver-form h2 { margin-top: 0; }
+.driver-form-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--drivelog-spacing-small); }
+.driver-form-row label { margin-bottom: 0; flex: 1 1 200px; }
+.comfort { display: inline-flex; align-items: center; gap: var(--drivelog-spacing-extra-small); }
+.ambient-dot { display: inline-block; width: var(--drivelog-spacing-small); height: var(--drivelog-spacing-small); border-radius: var(--drivelog-radius-full); border: var(--drivelog-border-width) solid var(--drivelog-border-strong); }
+
